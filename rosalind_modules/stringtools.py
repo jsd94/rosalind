@@ -17,7 +17,12 @@ def rev_comp(seq):
     rev = reverse(seq)
     rev_comp = complement(rev)
     return rev_comp
-    
+
+def transcribe(dna_seq):
+    rna_seq = dna_seq.replace('t','u')
+    rna_seq = rna_seq.replace('T','U')
+        
+    return rna_seq
     
 def gc_content(seq):
     count = seq.count('G')+seq.count('C')+seq.count('c')+seq.count('g')
